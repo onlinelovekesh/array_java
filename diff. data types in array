@@ -1,0 +1,41 @@
+Create three arrays to store data about five people. The first array should be Strings and should hold their last names.
+The next array should be doubles and should hold a grade average (on a 100-point scale). The last array should be INTs,
+should hold their student id numbers.
+
+
+
+import java.util.Scanner;
+public class idf
+{	
+	public static void main(String arg[])
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("How many records you want to enter ? :");
+		int count=sc.nextInt();
+		String name[]=new String[count];
+		float grade[]=new float[count];
+		int sid[]=new int[count];
+
+		System.out.println("Enter Last Names :");
+		for (int i=0;i<count;i++)
+		{
+			name[i]= sc.next();
+		}
+		System.out.println("Enter Grades :");
+		for (int i=0;i<count;i++)
+		{
+			grade[i]= sc.nextFloat();
+		}
+		System.out.println("Enter Student IDs :");
+		for (int i=0;i<count;i++)
+		{
+			sid[i]= sc.nextInt();
+		}
+		System.out.println("Name	Student ID	Grade");
+		for (int i=0;i<count;i++)
+		{
+			System.out.printf("%s	  %d	  %f\n", name[i], sid[i] , grade[i]);
+		}
+		sc.close();
+	}
+}
